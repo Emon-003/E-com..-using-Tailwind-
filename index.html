@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mukoo – Fashion</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Smooth scroll behavior */
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    /* Fill hero section with image */
+    .hero-slide {
+      background-size: cover;
+    }
+    
+    /* Responsive hero section heights */
+    .hero-slider {
+      min-height: 60vh;
+      height: 60vh;
+    }
+    
+    @media (min-width: 640px) {
+      .hero-slider {
+        min-height: 70vh;
+        height: 70vh;
+      }
+    }
+    
+    @media (min-width: 768px) {
+      .hero-slider {
+        min-height: 75vh;
+        height: 75vh;
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      .hero-slider {
+        min-height: 85vh;
+        height: 85vh;
+      }
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+<!-- HEADER -->
+<header class="bg-white sticky top-0 z-50 border-b">
+  <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+    <h1 class="text-2xl font-bold tracking-wide"><a href="#home" class="cursor-pointer">MUKOO</a></h1>
+    <nav class="hidden md:flex gap-8 text-sm font-medium">
+      <a href="#home" class="hover:text-gray-600 transition">Home</a>
+      <a href="#shop" class="hover:text-gray-600 transition">Shop</a>
+      <a href="#blog" class="hover:text-gray-600 transition">Blog</a>
+      <a href="#contact" class="hover:text-gray-600 transition">Contact</a>
+    </nav>
+    <div class="flex items-center gap-5">
+      <!-- Search -->
+      <button class="hover:text-gray-600 transition" aria-label="Search">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none"
+          viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M21 21l-4.35-4.35m1.85-5.65a7.5 7.5 0 11-15 0 7.5 7.5 0 0115 0z" />
+        </svg>
+      </button>
+    
+      <!-- Favourite -->
+      <button class="relative hover:text-red-500 transition" aria-label="Favourites">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none"
+          viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.364l-7.682-8.682a4.5 4.5 0 010-6.364z" />
+        </svg>
+      </button>
+    
+      <!-- Cart -->
+      <button class="relative hover:text-gray-600 transition" aria-label="Cart">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none"
+          viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.5 7h13M7 13L5.4 5M16 16a1 1 0 100 2 1 1 0 000-2zm-6 0a1 1 0 100 2 1 1 0 000-2z" />
+        </svg>
+    
+        <!-- Cart badge -->
+        <span
+          class="absolute -top-2 -right-2 bg-black text-white text-[10px] w-4 h-4 flex items-center justify-center rounded-full">
+          2
+        </span>
+      </button>
+    </div>
+    
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="home" class="relative overflow-hidden">
+  <div class="hero-slider relative">
+    <!-- Slide 1 -->
+    <div class="hero-slide absolute inset-0 bg-center bg-no-repeat flex items-center transition-opacity duration-[2000ms] ease-in-out opacity-100" style="background-image:url('images/hero/hero-1.jpg')" data-slide="0">
+      <div class="absolute inset-0 bg-black/40 flex items-center">
+        <div class="max-w-7xl mx-auto px-4 py-12 md:py-24 text-white w-full">
+          <p class="uppercase tracking-widest text-sm mb-3">Winter Collection</p>
+          <h2 class="text-3xl md:text-5xl font-bold leading-tight mb-6">New Winter<br/>Collections 2026</h2>
+          <p class="mb-8 text-base md:text-lg">There's nothing like trend</p>
+          <a href="#shop" class="inline-block bg-white text-black px-8 py-3 font-semibold hover:bg-gray-200 transition">Shop Now</a>
+        </div>
+      </div>
+    </div>
+    <!-- Slide 2 -->
+    <div class="hero-slide absolute inset-0 bg-center bg-no-repeat flex items-center transition-opacity duration-[2000ms] ease-in-out opacity-0" style="background-image:url('images/hero/hero-2.jpg')" data-slide="1">
+      <div class="absolute inset-0 bg-black/40 flex items-center">
+        <div class="max-w-7xl mx-auto px-4 py-12 md:py-24 text-white w-full">
+          <p class="uppercase tracking-widest text-sm mb-3">Women's Fashion</p>
+          <h2 class="text-3xl md:text-5xl font-bold leading-tight mb-6">Latest Women's<br/>Collections 2026</h2>
+          <p class="mb-8 text-base md:text-lg">Trending styles for you</p>
+          <a href="#shop" class="inline-block bg-white text-black px-8 py-3 font-semibold hover:bg-gray-200 transition">Shop Now</a>
+        </div>
+      </div>
+    </div>
+    <!-- Slide 3 -->
+    <div class="hero-slide absolute inset-0 bg-center bg-no-repeat flex items-center transition-opacity duration-[2000ms] ease-in-out opacity-0" style="background-image:url('images/hero/hero-3.jpg')" data-slide="2">
+      <div class="absolute inset-0 bg-black/40 flex items-center">
+        <div class="max-w-7xl mx-auto px-4 py-12 md:py-24 text-white w-full">
+          <p class="uppercase tracking-widest text-sm mb-3">Winter Collection</p>
+          <h2 class="text-3xl md:text-5xl font-bold leading-tight mb-6">Winter Fashion<br/>Collections 2026</h2>
+          <p class="mb-8 text-base md:text-lg">Fresh styles for winter</p>
+          <a href="#shop" class="inline-block bg-white text-black px-8 py-3 font-semibold hover:bg-gray-200 transition">Shop Now</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Navigation Arrows -->
+    <button class="hero-nav-prev absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-20 bg-white/80 hover:bg-white active:bg-white text-black p-2 md:p-3 rounded-full transition-all shadow-lg touch-manipulation" aria-label="Previous slide">
+      <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+      </svg>
+    </button>
+    <button class="hero-nav-next absolute right-2 md:right-4 top-1/2 -translate-y-1/2 z-20 bg-white/80 hover:bg-white active:bg-white text-black p-2 md:p-3 rounded-full transition-all shadow-lg touch-manipulation" aria-label="Next slide">
+      <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+      </svg>
+    </button>
+    
+    <!-- Slide Indicators -->
+    <div class="absolute bottom-4 md:bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+      <button class="hero-indicator w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-white/80 hover:bg-white active:bg-white transition-all touch-manipulation" data-indicator="0"></button>
+      <button class="hero-indicator w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-white/50 hover:bg-white active:bg-white transition-all touch-manipulation" data-indicator="1"></button>
+      <button class="hero-indicator w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-white/50 hover:bg-white active:bg-white transition-all touch-manipulation" data-indicator="2"></button>
+    </div>
+  </div>
+</section>
+
+<!-- ARRIVAL PRODUCTS -->
+<section id="shop" class="py-16">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-10">
+      <h3 class="text-3xl font-bold">Arrival Products</h3>
+      <p class="text-gray-500">Recent Products</p>
+    </div>
+
+    <div class="flex justify-center gap-4 mb-10">
+      <button id="filter-all" class="filter-btn px-6 py-2 border bg-black text-white hover:bg-gray-800 transition" data-filter="all">All</button>
+      <button id="filter-men" class="filter-btn px-6 py-2 border hover:bg-gray-100 transition" data-filter="men">Men</button>
+      <button id="filter-women" class="filter-btn px-6 py-2 border hover:bg-gray-100 transition" data-filter="women">Women</button>
+      <button id="filter-kids" class="filter-btn px-6 py-2 border hover:bg-gray-100 transition" data-filter="kids">Kids</button>
+    </div>
+
+    <div id="products-container" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-4 gap-6 mb-8">
+      <!-- Products will be inserted here by JavaScript -->
+    </div>
+    
+    <!-- Pagination Controls -->
+    <div class="flex justify-center items-center gap-2 mt-8">
+      <button id="prev-page" class="px-4 py-2 border border-gray-300 hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed transition">
+        Previous
+      </button>
+      <div id="pagination-numbers" class="flex gap-2">
+        <!-- Page numbers will be inserted here -->
+      </div>
+      <button id="next-page" class="px-4 py-2 border border-gray-300 hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed transition">
+        Next
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- DEALS -->
+<section id="deals" class="py-16 bg-gray-100">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-10">
+      <h3 class="text-3xl font-bold">Good Deals</h3>
+      <p class="text-gray-500">Deals of the day</p>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div class="bg-white shadow">
+        <img src="images/deals/deal-1.jpg" class="w-full h-[260px] object-cover" alt="Half Running Set" />
+        <div class="p-4">
+          <h4 class="font-semibold">Half Running Set</h4>
+          <p class="text-red-600 font-bold mt-1">$119.00</p>
+          <button class="mt-4 border border-black w-full py-2 text-sm hover:bg-black hover:text-white transition">Quick View</button>
+        </div>
+      </div>
+
+      <div class="bg-white shadow">
+        <img src="images/products/product-1.jpg" class="w-full h-[260px] object-cover" alt="Formal Men Lowers" />
+        <div class="p-4">
+          <h4 class="font-semibold">Formal Men Lowers</h4>
+          <p class="text-red-600 font-bold mt-1">$79.00</p>
+          <button class="mt-4 border border-black w-full py-2 text-sm hover:bg-black hover:text-white transition">Quick View</button>
+        </div>
+      </div>
+
+      <div class="bg-white shadow">
+        <img src="images/products/product-2.jpg" class="w-full h-[260px] object-cover" alt="Casual Summer Outfit" />
+        <div class="p-4">
+          <h4 class="font-semibold">Casual Summer Outfit</h4>
+          <p class="text-red-600 font-bold mt-1">$89.00</p>
+          <button class="mt-4 border border-black w-full py-2 text-sm hover:bg-black hover:text-white transition">Quick View</button>
+        </div>
+      </div>
+
+      <div class="bg-white shadow">
+        <img src="images/products/product-3.jpg" class="w-full h-[260px] object-cover" alt="Stylish Dress Set" />
+        <div class="p-4">
+          <h4 class="font-semibold">Stylish Dress Set</h4>
+          <p class="text-red-600 font-bold mt-1">$99.00</p>
+          <button class="mt-4 border border-black w-full py-2 text-sm hover:bg-black hover:text-white transition">Quick View</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section id="blog" class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-10">
+      <h3 class="text-3xl font-bold">Latest News</h3>
+      <p class="text-gray-500">New Updates</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="shadow">
+        <img src="images/blog/blog-1.jpg" class="w-full h-[220px] object-cover" alt="Summer Sale" />
+        <div class="p-4">
+          <p class="text-xs text-gray-500">26 Jan 2026</p>
+          <h4 class="font-semibold mt-2">Let's start bring sale this summer</h4>
+          <p class="text-sm text-gray-600 mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+      </div>
+
+      <div class="shadow">
+        <img src="images/products/product-1.jpg" class="w-full h-[220px] object-cover" alt="Winter Collection" />
+        <div class="p-4">
+          <p class="text-xs text-gray-500">15 Feb 2026</p>
+          <h4 class="font-semibold mt-2">New Winter Collection Arrived</h4>
+          <p class="text-sm text-gray-600 mt-2">Discover the latest winter fashion trends and styles.</p>
+        </div>
+      </div>
+
+      <div class="shadow">
+        <img src="images/products/product-2.jpg" class="w-full h-[220px] object-cover" alt="Fashion Tips" />
+        <div class="p-4">
+          <p class="text-xs text-gray-500">03 Mar 2026</p>
+          <h4 class="font-semibold mt-2">Fashion Tips for Spring Season</h4>
+          <p class="text-sm text-gray-600 mt-2">Get ready for spring with our style guide and tips.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSTAGRAM -->
+<section class="py-16 bg-gray-100">
+  <div class="max-w-7xl mx-auto px-4 text-center">
+    <h3 class="text-3xl font-bold">Instagram Gallery</h3>
+    <p class="text-gray-500 mb-8"></p>
+    <div class="grid grid-cols-3 md:grid-cols-6 gap-2">
+      <img src="images/instagram/insta-1.jpg" class="aspect-square object-cover" />
+      <img src="images/instagram/insta-2.jpg" class="aspect-square object-cover" />
+      <img src="images/instagram/insta-3.jpg" class="aspect-square object-cover" />
+      <img src="images/instagram/insta-4.jpg" class="aspect-square object-cover" />
+      <img src="images/instagram/insta-5.jpg" class="aspect-square object-cover" />
+      <img src="images/instagram/insta-6.jpg" class="aspect-square object-cover" />
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contact" class="bg-gray-900 text-gray-300 py-14">
+  <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-8">
+    <div>
+      <h4 class="text-white font-semibold mb-4">Supports</h4>
+      <ul class="space-y-2 text-sm">
+        <li>Contact Us</li><li>About</li><li>Size Guide</li><li>FAQ</li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="text-white font-semibold mb-4">Shop</h4>
+      <ul class="space-y-2 text-sm"><li>Men</li><li>Women</li><li>Kids</li></ul>
+    </div>
+    <div>
+      <h4 class="text-white font-semibold mb-4">Company</h4>
+      <ul class="space-y-2 text-sm"><li>About</li><li>Blog</li><li>Login</li></ul>
+    </div>
+    <div>
+      <h4 class="text-white font-semibold mb-4">Subscribe</h4>
+      <div class="flex">
+        <input class="w-full px-3 py-2 bg-gray-800 text-white" placeholder="Email" />
+        <button class="bg-white text-black px-4">Go</button>
+      </div>
+    </div>
+  </div>
+  <p class="text-center text-sm text-gray-500 mt-10">© 2021 Mukoo – ThemezHub</p>
+</footer>
+
+<script>
+  // Hero Slider Functionality
+  (function() {
+    const slides = document.querySelectorAll('.hero-slide');
+    const indicators = document.querySelectorAll('.hero-indicator');
+    const prevBtn = document.querySelector('.hero-nav-prev');
+    const nextBtn = document.querySelector('.hero-nav-next');
+    const slider = document.querySelector('.hero-slider');
+    
+    let currentSlide = 0;
+    let autoSlideInterval;
+    let isDragging = false;
+    let startX = 0;
+    let currentX = 0;
+    let dragThreshold = 50; // Minimum drag distance to trigger slide change
+    let isTransitioning = false; // Lock to prevent overlapping transitions
+    
+    const totalSlides = slides.length;
+    const TRANSITION_DURATION = 2000; // Match CSS transition duration
+    const AUTO_SLIDE_INTERVAL = 4000; // 4 seconds between slides
+    
+    // Show specific slide
+    function showSlide(index) {
+      // Prevent overlapping transitions
+      if (isTransitioning) return;
+      
+      // Ensure index is within bounds
+      if (index < 0) index = totalSlides - 1;
+      if (index >= totalSlides) index = 0;
+      
+      // Don't do anything if it's the same slide
+      if (index === currentSlide) return;
+      
+      // Set transition lock
+      isTransitioning = true;
+      
+      // Hide all slides
+      slides.forEach((slide, i) => {
+        slide.classList.remove('opacity-100');
+        slide.classList.add('opacity-0');
+      });
+      
+      // Show current slide
+      slides[index].classList.remove('opacity-0');
+      slides[index].classList.add('opacity-100');
+      
+      // Update indicators
+      indicators.forEach((indicator, i) => {
+        if (i === index) {
+          indicator.classList.remove('bg-white/50');
+          indicator.classList.add('bg-white/80');
+          indicator.classList.add('w-8');
+          indicator.classList.remove('w-3');
+        } else {
+          indicator.classList.remove('bg-white/80');
+          indicator.classList.add('bg-white/50');
+          indicator.classList.remove('w-8');
+          indicator.classList.add('w-3');
+        }
+      });
+      
+      currentSlide = index;
+      
+      // Release transition lock after transition completes
+      setTimeout(() => {
+        isTransitioning = false;
+      }, TRANSITION_DURATION);
+    }
+    
+    // Go to next slide
+    function nextSlide() {
+      if (!isTransitioning) {
+        showSlide(currentSlide + 1);
+      }
+    }
+    
+    // Go to previous slide
+    function prevSlide() {
+      if (!isTransitioning) {
+        showSlide(currentSlide - 1);
+      }
+    }
+    
+    // Start auto-slide
+    function startAutoSlide() {
+      stopAutoSlide(); // Clear any existing interval
+      autoSlideInterval = setInterval(nextSlide, AUTO_SLIDE_INTERVAL);
+    }
+    
+    // Stop auto-slide
+    function stopAutoSlide() {
+      clearInterval(autoSlideInterval);
+    }
+    
+    // Restart auto-slide (used after manual navigation)
+    function restartAutoSlide() {
+      stopAutoSlide();
+      startAutoSlide();
+    }
+    
+    // Navigation button event listeners
+    nextBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (!isTransitioning) {
+        nextSlide();
+        restartAutoSlide();
+      }
+    });
+    
+    prevBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (!isTransitioning) {
+        prevSlide();
+        restartAutoSlide();
+      }
+    });
+    
+    // Indicator click event listeners
+    indicators.forEach((indicator, index) => {
+      indicator.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (!isTransitioning && index !== currentSlide) {
+          showSlide(index);
+          restartAutoSlide();
+        }
+      });
+    });
+    
+    // Mouse drag functionality
+    slider.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      startX = e.clientX;
+      stopAutoSlide();
+      slider.style.cursor = 'grabbing';
+    });
+    
+    slider.addEventListener('mousemove', (e) => {
+      if (!isDragging) return;
+      currentX = e.clientX;
+    });
+    
+    slider.addEventListener('mouseup', (e) => {
+      if (!isDragging) return;
+      isDragging = false;
+      slider.style.cursor = 'grab';
+      
+      const diffX = startX - currentX;
+      
+      if (Math.abs(diffX) > dragThreshold && !isTransitioning) {
+        if (diffX > 0) {
+          // Dragged left, go to next slide
+          nextSlide();
+        } else {
+          // Dragged right, go to previous slide
+          prevSlide();
+        }
+        restartAutoSlide();
+      } else {
+        restartAutoSlide();
+      }
+    });
+    
+    slider.addEventListener('mouseleave', () => {
+      if (isDragging) {
+        isDragging = false;
+        slider.style.cursor = 'grab';
+        restartAutoSlide();
+      }
+    });
+    
+    // Set cursor style
+    slider.style.cursor = 'grab';
+    
+    // Touch events for mobile swipe
+    slider.addEventListener('touchstart', (e) => {
+      isDragging = true;
+      startX = e.touches[0].clientX;
+      stopAutoSlide();
+    }, { passive: true });
+    
+    slider.addEventListener('touchmove', (e) => {
+      if (!isDragging) return;
+      currentX = e.touches[0].clientX;
+    }, { passive: true });
+    
+    slider.addEventListener('touchend', (e) => {
+      if (!isDragging) return;
+      isDragging = false;
+      
+      const diffX = startX - currentX;
+      
+      if (Math.abs(diffX) > dragThreshold && !isTransitioning) {
+        if (diffX > 0) {
+          // Swiped left, go to next slide
+          nextSlide();
+        } else {
+          // Swiped right, go to previous slide
+          prevSlide();
+        }
+        restartAutoSlide();
+      } else {
+        restartAutoSlide();
+      }
+    }, { passive: true });
+    
+    // Pause auto-slide on hover (desktop only)
+    slider.addEventListener('mouseenter', stopAutoSlide);
+    slider.addEventListener('mouseleave', startAutoSlide);
+    
+    // Initialize - start auto-slide
+    startAutoSlide();
+  })();
+
+  // Products Pagination
+  (function() {
+    const products = [
+      { name: "Women Striped Shirt Dress", price: "$99 – $129", image: "product-1.jpg", sale: true },
+      { name: "Printed Straight Kurta", price: "$199", image: "product-2.jpg", sale: false },
+      { name: "Girls Floral Jumpsuit", price: "$110", image: "product-3.jpg", sale: false },
+      { name: "A-Line Dress", price: "$149", image: "product-1.jpg", sale: false },
+      { name: "Classic White Shirt", price: "$89", image: "product-2.jpg", sale: true },
+      { name: "Floral Summer Dress", price: "$125", image: "product-3.jpg", sale: false },
+      { name: "Elegant Black Dress", price: "$179", image: "product-1.jpg", sale: true },
+      { name: "Casual Denim Jacket", price: "$139", image: "product-2.jpg", sale: false },
+      { name: "Striped Midi Skirt", price: "$95", image: "product-3.jpg", sale: false },
+      { name: "Long Sleeve Blouse", price: "$79", image: "product-1.jpg", sale: false },
+      { name: "Patterned Jumpsuit", price: "$165", image: "product-2.jpg", sale: true },
+      { name: "Vintage Style Dress", price: "$145", image: "product-3.jpg", sale: false },
+      { name: "Modern Blazer", price: "$189", image: "product-1.jpg", sale: false },
+      { name: "Casual T-Shirt", price: "$45", image: "product-2.jpg", sale: true },
+      { name: "Evening Gown", price: "$299", image: "product-3.jpg", sale: false },
+      { name: "Summer Shorts", price: "$65", image: "product-1.jpg", sale: false },
+      { name: "Formal Trousers", price: "$115", image: "product-2.jpg", sale: true },
+      { name: "Casual Sweater", price: "$85", image: "product-3.jpg", sale: false },
+      { name: "Designer Handbag", price: "$249", image: "product-1.jpg", sale: false },
+      { name: "Leather Jacket", price: "$329", image: "product-2.jpg", sale: true }
+    ];
+
+    const productsContainer = document.getElementById('products-container');
+    const paginationNumbers = document.getElementById('pagination-numbers');
+    const prevBtn = document.getElementById('prev-page');
+    const nextBtn = document.getElementById('next-page');
+    
+    let currentPage = 1;
+    let itemsPerPage = 8; // Default for xl screens (4 columns × 2 rows)
+    
+    // Get items per page based on screen size (2 rows always)
+    function getItemsPerPage() {
+      const width = window.innerWidth;
+      if (width >= 1280) return 8;  // xl: 4 columns × 2 rows = 8 items
+      if (width >= 1024) return 12; // lg: 6 columns × 2 rows = 12 items
+      if (width >= 768) return 8;   // md: 4 columns × 2 rows = 8 items
+      if (width >= 640) return 6;   // sm: 3 columns × 2 rows = 6 items
+      return 4; // default: 2 columns × 2 rows = 4 items
+    }
+    
+    // Update items per page on resize
+    window.addEventListener('resize', () => {
+      const newItemsPerPage = getItemsPerPage();
+      if (newItemsPerPage !== itemsPerPage) {
+        itemsPerPage = newItemsPerPage;
+        currentPage = 1;
+        renderProducts();
+        renderPagination();
+      }
+    });
+    
+    // Initialize items per page
+    itemsPerPage = getItemsPerPage();
+    
+    // Calculate total pages
+    function getTotalPages() {
+      return Math.ceil(products.length / itemsPerPage);
+    }
+    
+    // Render products for current page
+    function renderProducts() {
+      const start = (currentPage - 1) * itemsPerPage;
+      const end = start + itemsPerPage;
+      const pageProducts = products.slice(start, end);
+      
+      productsContainer.innerHTML = pageProducts.map(product => `
+        <div class="bg-white shadow group">
+          <div class="relative">
+            ${product.sale ? '<span class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1">Sale</span>' : ''}
+            <img src="images/products/${product.image}" class="w-full h-[360px] object-cover" alt="${product.name}" />
+          </div>
+          <div class="p-4 text-center">
+            <h4 class="font-semibold">${product.name}</h4>
+            <p class="text-sm mt-1">${product.price}</p>
+            <button class="mt-4 w-full bg-black text-white py-2 text-sm hover:bg-gray-800 transition">Add To Cart</button>
+          </div>
+        </div>
+      `).join('');
+    }
+    
+    // Render pagination numbers
+    function renderPagination() {
+      const totalPages = getTotalPages();
+      paginationNumbers.innerHTML = '';
+      
+      // Show max 5 page numbers
+      let startPage = Math.max(1, currentPage - 2);
+      let endPage = Math.min(totalPages, startPage + 4);
+      
+      if (endPage - startPage < 4) {
+        startPage = Math.max(1, endPage - 4);
+      }
+      
+      for (let i = startPage; i <= endPage; i++) {
+        const pageBtn = document.createElement('button');
+        pageBtn.className = `px-4 py-2 border border-gray-300 hover:bg-gray-100 transition ${
+          i === currentPage ? 'bg-black text-white border-black' : ''
+        }`;
+        pageBtn.textContent = i;
+        pageBtn.addEventListener('click', () => {
+          currentPage = i;
+          renderProducts();
+          renderPagination();
+          window.scrollTo({ top: productsContainer.offsetTop - 100, behavior: 'smooth' });
+        });
+        paginationNumbers.appendChild(pageBtn);
+      }
+      
+      // Update prev/next buttons
+      prevBtn.disabled = currentPage === 1;
+      nextBtn.disabled = currentPage === totalPages;
+    }
+    
+    // Event listeners
+    prevBtn.addEventListener('click', () => {
+      if (currentPage > 1) {
+        currentPage--;
+        renderProducts();
+        renderPagination();
+        window.scrollTo({ top: productsContainer.offsetTop - 100, behavior: 'smooth' });
+      }
+    });
+    
+    nextBtn.addEventListener('click', () => {
+      const totalPages = getTotalPages();
+      if (currentPage < totalPages) {
+        currentPage++;
+        renderProducts();
+        renderPagination();
+        window.scrollTo({ top: productsContainer.offsetTop - 100, behavior: 'smooth' });
+      }
+    });
+    
+    // Initialize
+    renderProducts();
+    renderPagination();
+    
+    // Add to cart functionality
+    productsContainer.addEventListener('click', (e) => {
+      if (e.target.textContent === 'Add To Cart') {
+        const productCard = e.target.closest('.bg-white');
+        const productName = productCard.querySelector('h4').textContent;
+        alert(`"${productName}" has been added to your cart!`);
+      }
+    });
+  })();
+
+  // Filter Buttons Functionality
+  (function() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Remove active class from all buttons
+        filterButtons.forEach(b => {
+          b.classList.remove('bg-black', 'text-white');
+          b.classList.add('bg-white', 'text-black');
+        });
+        
+        // Add active class to clicked button
+        btn.classList.remove('bg-white', 'text-black');
+        btn.classList.add('bg-black', 'text-white');
+        
+        const filter = btn.dataset.filter;
+        // Scroll to products section
+        document.getElementById('shop').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+  })();
+
+  // Quick View Buttons Functionality
+  (function() {
+    document.addEventListener('click', (e) => {
+      if (e.target.textContent === 'Quick View') {
+        const productCard = e.target.closest('.bg-white');
+        const productName = productCard.querySelector('h4').textContent;
+        const productPrice = productCard.querySelector('.text-red-600').textContent;
+        alert(`Quick View: ${productName}\nPrice: ${productPrice}\n\nThis would open a product details modal in a real application.`);
+      }
+    });
+  })();
+
+  // Subscribe Button Functionality
+  (function() {
+    const subscribeBtn = document.querySelector('footer button');
+    const subscribeInput = document.querySelector('footer input[placeholder="Email"]');
+    
+    if (subscribeBtn && subscribeInput) {
+      subscribeBtn.addEventListener('click', () => {
+        const email = subscribeInput.value;
+        if (email && email.includes('@')) {
+          alert(`Thank you for subscribing with ${email}!`);
+          subscribeInput.value = '';
+        } else {
+          alert('Please enter a valid email address.');
+        }
+      });
+      
+      subscribeInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+          subscribeBtn.click();
+        }
+      });
+    }
+  })();
+</script>
+
+</body>
+</html>
